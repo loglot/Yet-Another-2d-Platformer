@@ -5,7 +5,7 @@ import { Imports } from "./lib/import.js";
 
 var game = new Imports(this)
 
-
+var fps=0
 requestAnimationFrame(stick)
 
 function stick(){
@@ -25,5 +25,17 @@ function stick(){
     game.display.tick()
     kd.tick()
     game.debug.print()
+    FPSCalc()
     requestAnimationFrame(stick)
+}
+
+
+async function FPSCalc(){
+    fps++
+    await sleep(1000)
+    fps--
+    game.debug.fpsCount = fps
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
