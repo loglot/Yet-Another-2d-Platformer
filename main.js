@@ -10,21 +10,28 @@ var game = new Imports(this)
 requestAnimationFrame(stick)
 
 function stick(){
-    // document.getElementById("debug").innerHTML = `A not pressed ${game.camera.x}`;
+    // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
     if(kd.A.isDown()){
-        game.camera.velX--
-        // document.getElementById("debug").innerHTML = `A pressed ${game.camera.x}`;
+        game.player.velX--
+        // document.getElementById("debug").innerHTML = `A pressed ${game.player.x}`;
     }
     if(kd.S.isDown()){
-        game.camera.velY++
+        game.player.velY++
     }
     if(kd.D.isDown()){
-        game.camera.velX++
+        game.player.velX++
     }
     if(kd.W.isDown()){
-        game.camera.velY--
+        game.player.velY--
+    }
+    if(kd.RIGHT.isDown()){
+        game.camera.velR--
+    }
+    if(kd.LEFT.isDown()){
+        game.camera.velR++
     }
     game.camera.tick()
+    game.player.tick()
 
     game.display.tick()
     kd.tick()
