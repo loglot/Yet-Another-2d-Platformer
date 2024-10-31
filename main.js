@@ -25,10 +25,18 @@ function stick(){
         game.player.velY--
     }
     if(kd.RIGHT.isDown()){
-        game.camera.velR--
+        game.camera.velR = -50
     }
     if(kd.LEFT.isDown()){
-        game.camera.velR++
+        game.camera.velR = 50
+    }
+    if(kd.Q.isDown()){
+        game.camera.movementFactor = 10
+    }
+    if(kd.E.isDown()){
+        game.camera.movementFactor = 100
+        game.player.velX =0
+        game.player.velY =0
     }
     game.camera.tick()
     game.player.tick()
