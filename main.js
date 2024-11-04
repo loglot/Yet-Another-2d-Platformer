@@ -24,7 +24,7 @@ function stick(){
 
     game.display.tick()
     kd.tick()
-    game.debug.print()
+    game.debug.tick()
     FPSCalc()
     requestAnimationFrame(stick)
 }
