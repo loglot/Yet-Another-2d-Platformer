@@ -20,7 +20,7 @@ function stick(){
         game.camera.ImpactCameraShake()
     }
     game.camera.tick()
-    game.player.tick()
+     game.player.tick()
 
     game.display.tick()
     kd.tick()
