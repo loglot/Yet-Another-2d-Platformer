@@ -25,6 +25,7 @@ function stick(){
     game.display.tick()
     kd.tick()
     game.debug.tick()
+    game.held.tick()
     FPSCalc()
 
         
