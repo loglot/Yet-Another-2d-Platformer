@@ -21,11 +21,11 @@ function stick(){
     }
     game.camera.tick()
      game.player.tick()
+     game.held.tick()
 
     game.display.tick()
     kd.tick()
     game.debug.tick()
-    game.held.tick()
     FPSCalc()
 
         
