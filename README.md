@@ -10,7 +10,7 @@ this new version runs on the new **Yet Another YA2P Engine (YA^2 2Pe)**
 ## Power List
 Hook [✓]
 
-Pickaxe [x]
+Pickaxe [✓]
 
 Grenade [✓]
 
