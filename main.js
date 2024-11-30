@@ -9,13 +9,13 @@ var fps=0
 requestAnimationFrame(stick)
 
 function stick(){
-    // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
-    if(kd.RIGHT.isDown()){
-        game.camera.velR = -10
-    }
-    if(kd.LEFT.isDown()){
-        game.camera.velR = 10
-    }
+    // // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
+    // if(kd.RIGHT.isDown()){
+    //     game.camera.velR = -10
+    // }
+    // if(kd.LEFT.isDown()){
+    //     game.camera.velR = 10
+    // }
     if(kd.Q.isDown()){
         game.camera.ImpactCameraShake()
     }
