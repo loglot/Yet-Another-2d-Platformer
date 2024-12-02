@@ -16,9 +16,9 @@ function stick(){
     // if(kd.LEFT.isDown()){
     //     game.camera.velR = 10
     // }
-    if(kd.Q.isDown()){
-        game.camera.ImpactCameraShake()
-    }
+    // if(kd.Q.isDown()){
+    //     game.camera.ImpactCameraShake()
+    // }
     game.camera.tick()
      game.player.tick()
      game.held.tick()

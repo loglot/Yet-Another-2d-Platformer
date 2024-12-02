@@ -1,4 +1,33 @@
 <!DOCTYPE html>
+
+<link rel="stylesheet" href="style.css"<!---->
+<div class="background">
+    <div class="header">
+      <div class="inner-header flex">
+      </div>
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="-5" fill="rgba(25,25,25,1)" />
+              <use xlink:href="#gentle-wave" x="48" y="-3" fill="rgba(35,35,35,1)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45,45,45,1" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(55,55,55,1)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(65,65,65,1)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(75,75,75,1)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="gradient"></div> 
+    <div class="blurOpacity"></div>
+    <div class="backGrad"><div class="blur"></div>
+</div>
+
 <link rel="icon" type="image/x-icon"
     href="https://raw.githubusercontent.com/loglot/Yet-Another-Collectathon/main/logo.ico">
 <title>Yet Another 2d Platformer</title> 
@@ -25,13 +54,15 @@
   }
 </style>
 
-
 <body style="background-color:rgb(0, 0, 0);"></body>
 
-
+<div class="padding">
   <!----> <canvas id="game_screen" width="2514" height="1377">
     This Game Requires The HTML5 Canvas, And Javascript To Function
   </canvas> <!---->
+  
+</div>
+
 
   <p id="debug"></p>
    
