@@ -19,10 +19,14 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
+    if(kd.P.isDown()){
+        game.state = "menu"
+    }
 
-    game.camera.tick()
+    game.menu.preTick()
     
     if(game.state == "game"){
+        game.camera.tick()
         game.player.tick()
         game.held.tick()
     }
