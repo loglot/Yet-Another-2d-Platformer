@@ -19,13 +19,18 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
+
     game.camera.tick()
-     game.player.tick()
-     game.held.tick()
+    
+    if(game.state == "game"){
+        game.player.tick()
+        game.held.tick()
+    }
 
     game.display.tick()
     kd.tick()
     game.debug.tick()
+    game.menu.tick()
     FPSCalc()
 
         
