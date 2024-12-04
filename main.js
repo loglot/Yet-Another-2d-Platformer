@@ -19,25 +19,28 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
-    if(kd.P.isDown()){
-        game.state = "menu"
-    }
-
-    game.menu.preTick()
+    if(fps<60 || kd.F.isDown()){
+        if(kd.P.isDown()){
+            game.state = "menu"
+        }
     
-    if(game.state == "game"){
-        game.camera.tick()
-        game.player.tick()
-        game.held.tick()
-    }
-
-    game.display.tick()
-    kd.tick()
-    game.debug.tick()
-    game.menu.tick()
-    FPSCalc()
-
+        game.menu.preTick()
         
+        if(game.state == "game"){
+            game.camera.tick()
+            game.player.tick()
+            game.held.tick()
+        }
+    
+        game.display.tick()
+        kd.tick()
+        game.debug.tick()
+        game.menu.tick()
+        FPSCalc()
+    
+            
+    
+    }
     requestAnimationFrame(stick)
 }
 
