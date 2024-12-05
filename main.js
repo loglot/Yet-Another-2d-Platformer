@@ -31,7 +31,7 @@ function stick(){
             game.player.tick()
             game.held.tick()
         }
-    
+        game.background.tick()
         game.display.tick()
         kd.tick()
         game.debug.tick()
