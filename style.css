@@ -12,6 +12,7 @@ p,h1,h2,h3,h4,h5,h6  {
     border-color: black;
     border-width: 5px;
     border-style:solid;
+    position:absolute;
   }
   .site-header-content {
     background: none!important;
@@ -21,7 +22,7 @@ p,h1,h2,h3,h4,h5,h6  {
   }
   .invisable {
     opacity:0; 
-    position:fixed;
+    position:absolute;
     width:10000vw;
     height:10000vh;
   }
@@ -139,6 +140,7 @@ p,h1,h2,h3,h4,h5,h6  {
    
 
   body{
+    overflow: hidden;
     display:flex;
     margin:0;
     padding:0;
