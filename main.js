@@ -19,9 +19,13 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
+    var axes = []
+    axes=game.controller.controllerCheck("axes")
+    var buttons = []
+    buttons=game.controller.controllerCheck("buttons")
     if(fps<60 || kd.F.isDown()){
         game.controller.tick()
-        if(kd.P.isDown()){
+        if(kd.P.isDown()||buttons[9]){
             game.state = "menu"
         }
     
