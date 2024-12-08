@@ -20,6 +20,7 @@ function stick(){
     //     game.camera.ImpactCameraShake()
     // }
     if(fps<60 || kd.F.isDown()){
+        game.controller.tick()
         if(kd.P.isDown()){
             game.state = "menu"
         }
