@@ -7,7 +7,7 @@ var game = new Imports(this)
 
 var fps=0
 requestAnimationFrame(stick)
-
+game.load()
 function stick(){
     // // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
     // if(kd.RIGHT.isDown()){
@@ -35,6 +35,7 @@ function stick(){
             game.camera.tick()
             game.player.tick()
             game.held.tick()
+            game.save()
         }
         game.background.tick()
         game.display.tick()
