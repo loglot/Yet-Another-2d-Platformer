@@ -42,7 +42,10 @@ function stick(){
         game.display.tick()
         kd.tick()
         game.debug.tick()
-        game.menu.tick()
+        if(game.state=="menu"||game.menu.alpha>0){
+         
+            game.menu.tick()
+        }
         FPSCalc()
     
             
