@@ -21,8 +21,8 @@ function stick(){
     //     game.camera.ImpactCameraShake()
     // }
     time += 1/60
-    var seconds=(Math.round(time*100)/100)
-    game.debug.add(Math.floor(seconds/60)%60+":"+Math.round(seconds%60)) 
+    var seconds=(Math.floor(time*100)/100)
+    game.debug.add(("0"+Math.floor(seconds/3600)%24).slice(-2)+":"+("0"+Math.floor(seconds/60)%60).slice(-2)+":"+("0"+Math.floor(seconds%60)).slice(-2)+"."+Math.floor(seconds%1*100)) 
     var axes = []
     axes=game.controller.controllerCheck("axes")
     var buttons = []
