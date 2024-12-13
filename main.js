@@ -6,6 +6,7 @@ import { Imports } from "./lib/import.js";
 var game = new Imports(this)
 
 var fps=0
+var time = 0
 requestAnimationFrame(stick)
 game.load()
 function stick(){
@@ -19,6 +20,9 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
+    time += 1/60
+    var seconds=(Math.round(time*100)/100)
+    game.debug.add(Math.floor(seconds/60)%60+":"+Math.round(seconds%60)) 
     var axes = []
     axes=game.controller.controllerCheck("axes")
     var buttons = []
