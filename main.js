@@ -6,7 +6,6 @@ import { Imports } from "./lib/import.js";
 var game = new Imports(this)
 
 var fps=0
-var time = 0
 requestAnimationFrame(stick)
 game.load()
 function stick(){
@@ -20,9 +19,6 @@ function stick(){
     // if(kd.Q.isDown()){
     //     game.camera.ImpactCameraShake()
     // }
-    time += 1/60
-    var seconds=(Math.floor(time*100)/100)
-    game.debug.add(("0"+Math.floor(seconds/3600)%24).slice(-2)+":"+("0"+Math.floor(seconds/60)%60).slice(-2)+":"+("0"+Math.floor(seconds%60)).slice(-2)+"."+Math.floor(seconds%1*100)) 
     var axes = []
     axes=game.controller.controllerCheck("axes")
     var buttons = []
@@ -36,6 +32,7 @@ function stick(){
         game.menu.preTick()
         
         if(game.state == "game"){
+            game.timer.tick()
             game.camera.tick()
             game.player.tick()
             game.held.tick()
