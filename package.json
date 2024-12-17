@@ -1,0 +1,18 @@
+{
+  "name": "yet-another-2d-platformer-electron",
+  "version": "1.0.0",
+  "description": "ya2p",
+  "main": "Electron.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "loglot",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron/packager": "^18.3.6",
+    "electron": "^33.2.1"
+  }
+}
