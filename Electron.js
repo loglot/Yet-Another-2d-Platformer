@@ -7,7 +7,7 @@ const win = new BrowserWindow({
   transparent: true, frame: false
 })
 
-  win.loadFile('index.html')
+  win.loadFile('electron.html')
 }
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()

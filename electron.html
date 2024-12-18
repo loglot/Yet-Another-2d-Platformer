@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="electron.css"<!---->
+
+<link rel="icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/loglot/Yet-Another-Collectathon/main/logo.ico">
+<title>Yet Another 2d Platformer</title> 
+<style>
+  canvas {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    color:white;
+    white-space: pre-line;
+  }
+  canvas {
+    background: #000;
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+<canvas id="map" class="invisable" width="2514" height="1377">
+  This Game Requires The HTML5 Canvas, And Javascript To Function
+</canvas> 
+<div class="padding">
+  <!----> <canvas id="game_screen" width="2514" height="1377">
+    This Game Requires The HTML5 Canvas, And Javascript To Function
+  </canvas> <!---->
+  
+</div>
+
+
+  <p id="debug"></p>
+   
+ 
+  <script type="module" src="lib/utills/KeyManager.js"></script>
+  <script type="module" src="main.js"></script>
