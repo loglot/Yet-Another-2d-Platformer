@@ -8,6 +8,7 @@ var fps=0
 requestAnimationFrame(stick)
 game.load()
 function stick(){
+    requestAnimationFrame(stick)
     // // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
     // if(kd.RIGHT.isDown()){
     //     game.camera.velR = -10
@@ -50,7 +51,6 @@ function stick(){
             
     
     }
-    requestAnimationFrame(stick)
 }
 
 
