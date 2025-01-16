@@ -5,9 +5,11 @@ import { Imports } from "./lib/import.js";
 var game = new Imports(this)
 
 var fps=0
+var autoSave = 100
 requestAnimationFrame(stick)
 game.load()
 function stick(){
+    game.debug.BeginProfiler("fullTick")
     requestAnimationFrame(stick)
     // // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
     // if(kd.RIGHT.isDown()){
@@ -34,12 +36,18 @@ function stick(){
         if(game.state == "game"){
             game.timer.tick()
             game.camera.tick()
-            game.player.tick()
+            game.player.tick() // OPTIMIZE?
             game.held.tick()
-            game.save()
+            autoSave--
+            if(autoSave<=0){
+                game.save() // OPTIMIZED BY ONLY HAPPENING EVERY 400 TICKS
+                autoSave=400
+                // alert("AUTOSAVE!")
+            }
         }
-        game.background.tick()
-        game.display.tick()
+        game.background.tick() // OPTIMIZE?
+        // game.debug.EndProfiler()
+        game.display.tick() // OPTIMIZED BY USING CASHED MAP INSTEAD OF DRAWING AROUND THE PLAYER EVERY TICK
         kd.tick()
         game.debug.tick()
         if(game.state=="menu"||game.menu.alpha>0){
@@ -49,6 +57,10 @@ function stick(){
         FPSCalc()
     
             
+        // game.debug.EndProfiler()
+            if(kd.J.isDown()){
+                game.debug.EndProfiler("fullTick")
+            }
     
     }
 }
