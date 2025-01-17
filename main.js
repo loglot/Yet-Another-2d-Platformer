@@ -6,6 +6,7 @@ var game = new Imports(this)
 
 var fps=0
 var autoSave = 100
+game.menu.preTick()
 requestAnimationFrame(stick)
 game.load()
 function stick(){
@@ -31,7 +32,6 @@ function stick(){
             game.state = "menu"
         }
     
-        game.menu.preTick()
         
         if(game.state == "game"){
             game.timer.tick()
