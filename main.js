@@ -10,8 +10,8 @@ game.menu.preTick()
 requestAnimationFrame(stick)
 game.load()
 function stick(){
-    game.debug.BeginProfiler("fullTick")
     requestAnimationFrame(stick)
+    game.debug.BeginProfiler("fullTick")
     // // document.getElementById("debug").innerHTML = `A not pressed ${game.player.x}`;
     // if(kd.RIGHT.isDown()){
     //     game.camera.velR = -10
@@ -46,7 +46,6 @@ function stick(){
             }
         }
         game.background.tick() // OPTIMIZE?
-        // game.debug.EndProfiler()
         game.display.tick() // OPTIMIZED BY USING CASHED MAP INSTEAD OF DRAWING AROUND THE PLAYER EVERY TICK
         kd.tick()
         game.debug.tick()
